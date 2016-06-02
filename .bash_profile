@@ -5,6 +5,7 @@ fi
 
 # log everything
 export HISTSIZE=""
+export HISTTIMEFORMAT="%Y-%m-%d %T "
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
