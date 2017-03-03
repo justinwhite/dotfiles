@@ -1,12 +1,8 @@
-# prep env as if local to the machine
-if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
-fi
-
-# log everything
-export HISTSIZE=""
-export HISTTIMEFORMAT="%Y-%m-%d %T "
-
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export PS1="\u@\h \w $ "
+
+if [[ "$TERM" != "screen" ]]; then
+  tmux attach || tmux new
+fi
+
+export PS1="\e[1;34m\u@\h \w $ \e[m"
